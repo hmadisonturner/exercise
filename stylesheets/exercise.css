@@ -1,0 +1,153 @@
+/* line 16, ../sass/exercise.scss */
+.retina {
+  width: 320px;
+  height: 180px;
+  background-size: 320px 180px;
+  background-repeat: no-repeat;
+  background-image: url(http://dsx.weather.com/util/image/w/68a62f4e-122e-4c72-91b2-ec9f5024e031.jpg?v=at&w=320&h=180&api=7db9fe61-7414-47b5-9871-e17d87b8b6a0);
+}
+@media only screen and (-webkit-min-device-pixel-ratio: 2), only screen and (-moz-min-device-pixel-ratio: 2), only screen and (-o-min-device-pixel-ratio: 2 / 1), only screen and (min-device-pixel-ratio: 2), only screen and (min-resolution: 192dpi), only screen and (min-resolution: 2dppx) {
+  /* line 28, ../sass/exercise.scss */
+  .retina {
+    width: 320px;
+    height: 299px;
+    background-size: 320px 299px;
+    background-image: url(http://dsx.weather.com/util/image/w/68a62f4e-122e-4c72-91b2-ec9f5024e031.jpg?api=7db9fe61-7414-47b5-9871-e17d87b8b6a0&h=598&w=640&v=at);
+  }
+}
+
+/* line 38, ../sass/exercise.scss */
+* {
+  font-family: Helvetica, sans-serif;
+}
+
+/* line 42, ../sass/exercise.scss */
+section {
+  padding: 1em;
+}
+@media (min-width: 1024px) {
+  /* line 42, ../sass/exercise.scss */
+  section {
+    position: relative;
+    max-width: 30%;
+    float: left;
+  }
+}
+
+/* line 51, ../sass/exercise.scss */
+.day {
+  background-color: white;
+}
+/* line 53, ../sass/exercise.scss */
+.day #main {
+  background-color: white;
+  /* Fallback Color */
+  background-image: -webkit-gradient(linear, left top, left bottom, from(aqua), to(white));
+  /* Saf4+, Chrome */
+  background-image: -webkit-linear-gradient(bottom, aqua, white);
+  /* Chrome 10+, Saf5.1+, iOS 5+ */
+  background-image: -moz-linear-gradient(bottom, aqua, white);
+  /* FF3.6 */
+  background-image: -ms-linear-gradient(bottom, aqua, white);
+  /* IE10 */
+  background-image: -o-linear-gradient(bottom, aqua, white);
+  /* Opera 11.10+ */
+  background-image: linear-gradient(bottom, aqua, white);
+  filter: progid:DXImageTransform.Microsoft.gradient(GradientType=0,StartColorStr='aqua', EndColorStr='white');
+}
+/* line 56, ../sass/exercise.scss */
+.day #sidebar {
+  background-color: white;
+  /* Fallback Color */
+  background-image: -webkit-gradient(linear, left top, left bottom, from(yellow), to(white));
+  /* Saf4+, Chrome */
+  background-image: -webkit-linear-gradient(bottom, yellow, white);
+  /* Chrome 10+, Saf5.1+, iOS 5+ */
+  background-image: -moz-linear-gradient(bottom, yellow, white);
+  /* FF3.6 */
+  background-image: -ms-linear-gradient(bottom, yellow, white);
+  /* IE10 */
+  background-image: -o-linear-gradient(bottom, yellow, white);
+  /* Opera 11.10+ */
+  background-image: linear-gradient(bottom, yellow, white);
+  filter: progid:DXImageTransform.Microsoft.gradient(GradientType=0,StartColorStr='yellow', EndColorStr='white');
+}
+/* line 59, ../sass/exercise.scss */
+.day #instruction {
+  background-color: white;
+  /* Fallback Color */
+  background-image: -webkit-gradient(linear, left top, left bottom, from(pink), to(white));
+  /* Saf4+, Chrome */
+  background-image: -webkit-linear-gradient(bottom, pink, white);
+  /* Chrome 10+, Saf5.1+, iOS 5+ */
+  background-image: -moz-linear-gradient(bottom, pink, white);
+  /* FF3.6 */
+  background-image: -ms-linear-gradient(bottom, pink, white);
+  /* IE10 */
+  background-image: -o-linear-gradient(bottom, pink, white);
+  /* Opera 11.10+ */
+  background-image: linear-gradient(bottom, pink, white);
+  filter: progid:DXImageTransform.Microsoft.gradient(GradientType=0,StartColorStr='pink', EndColorStr='white');
+}
+
+/* line 64, ../sass/exercise.scss */
+.night {
+  background-color: black;
+  color: white;
+}
+/* line 67, ../sass/exercise.scss */
+.night #main {
+  background-color: black;
+  /* Fallback Color */
+  background-image: -webkit-gradient(linear, left top, left bottom, from(red), to(black));
+  /* Saf4+, Chrome */
+  background-image: -webkit-linear-gradient(top, red, black);
+  /* Chrome 10+, Saf5.1+, iOS 5+ */
+  background-image: -moz-linear-gradient(top, red, black);
+  /* FF3.6 */
+  background-image: -ms-linear-gradient(top, red, black);
+  /* IE10 */
+  background-image: -o-linear-gradient(top, red, black);
+  /* Opera 11.10+ */
+  background-image: linear-gradient(top, red, black);
+  filter: progid:DXImageTransform.Microsoft.gradient(GradientType=0,StartColorStr='red', EndColorStr='black');
+}
+/* line 70, ../sass/exercise.scss */
+.night #sidebar {
+  background-color: black;
+  /* Fallback Color */
+  background-image: -webkit-gradient(linear, left top, left bottom, from(blue), to(black));
+  /* Saf4+, Chrome */
+  background-image: -webkit-linear-gradient(top, blue, black);
+  /* Chrome 10+, Saf5.1+, iOS 5+ */
+  background-image: -moz-linear-gradient(top, blue, black);
+  /* FF3.6 */
+  background-image: -ms-linear-gradient(top, blue, black);
+  /* IE10 */
+  background-image: -o-linear-gradient(top, blue, black);
+  /* Opera 11.10+ */
+  background-image: linear-gradient(top, blue, black);
+  filter: progid:DXImageTransform.Microsoft.gradient(GradientType=0,StartColorStr='blue', EndColorStr='black');
+}
+/* line 73, ../sass/exercise.scss */
+.night #instruction {
+  background-color: black;
+  /* Fallback Color */
+  background-image: -webkit-gradient(linear, left top, left bottom, from(green), to(black));
+  /* Saf4+, Chrome */
+  background-image: -webkit-linear-gradient(top, green, black);
+  /* Chrome 10+, Saf5.1+, iOS 5+ */
+  background-image: -moz-linear-gradient(top, green, black);
+  /* FF3.6 */
+  background-image: -ms-linear-gradient(top, green, black);
+  /* IE10 */
+  background-image: -o-linear-gradient(top, green, black);
+  /* Opera 11.10+ */
+  background-image: linear-gradient(top, green, black);
+  filter: progid:DXImageTransform.Microsoft.gradient(GradientType=0,StartColorStr='green', EndColorStr='black');
+}
+
+/* line 78, ../sass/exercise.scss */
+.clear {
+  clear: both;
+}

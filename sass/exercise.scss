@@ -1,0 +1,80 @@
+@import "breakpoint";
+
+$breakpoint-desktop: min-width 1024px;
+
+@mixin linear-gradient($direction, $fromColor, $toColor) {
+  background-color: $toColor; /* Fallback Color */
+  background-image: -webkit-gradient(linear, left top, left bottom, from($fromColor), to($toColor)); /* Saf4+, Chrome */
+  background-image: -webkit-linear-gradient($direction, $fromColor, $toColor); /* Chrome 10+, Saf5.1+, iOS 5+ */
+  background-image:    -moz-linear-gradient($direction, $fromColor, $toColor); /* FF3.6 */
+  background-image:     -ms-linear-gradient($direction, $fromColor, $toColor); /* IE10 */
+  background-image:      -o-linear-gradient($direction, $fromColor, $toColor); /* Opera 11.10+ */
+  background-image:         linear-gradient($direction, $fromColor, $toColor);
+  filter: progid:DXImageTransform.Microsoft.gradient(GradientType=0,StartColorStr='#{$fromColor}', EndColorStr='#{$toColor}');
+}
+
+.retina {
+	width: 320px;
+	height: 180px;
+	background-size: 320px 180px;
+	background-repeat: no-repeat;
+	background-image: url(http://dsx.weather.com/util/image/w/68a62f4e-122e-4c72-91b2-ec9f5024e031.jpg?v=at&w=320&h=180&api=7db9fe61-7414-47b5-9871-e17d87b8b6a0);
+	@media only screen and (-webkit-min-device-pixel-ratio: 2),
+		only screen and (-moz-min-device-pixel-ratio: 2),
+		only screen and (-o-min-device-pixel-ratio: 2/1),
+		only screen and (min-device-pixel-ratio: 2),
+		only screen and (min-resolution: 192dpi),
+		only screen and (min-resolution: 2dppx){
+		& {
+			width: 320px;
+			height: 299px;
+			background-size: 320px 299px;
+			
+			background-image: url(http://dsx.weather.com/util/image/w/68a62f4e-122e-4c72-91b2-ec9f5024e031.jpg?api=7db9fe61-7414-47b5-9871-e17d87b8b6a0&h=598&w=640&v=at);
+		}
+	}
+}
+
+* { 
+	font-family: Helvetica, sans-serif; 
+}
+
+section {
+	padding: 1em;
+	@include breakpoint($breakpoint-desktop) {
+		position: relative;
+		max-width: 30%;
+		float: left;
+	}
+}
+
+.day {
+	background-color: white;
+	#main {
+		@include linear-gradient(bottom, aqua, white);
+	}
+	#sidebar {
+		@include linear-gradient(bottom, yellow, white);
+	}
+	#instruction {
+		@include linear-gradient(bottom, pink, white);
+	}
+}
+
+.night {
+	background-color: black;
+	color: white;
+	#main {
+		@include linear-gradient(top, red, black);
+	}
+	#sidebar {
+		@include linear-gradient(top, blue, black);
+	}
+	#instruction {
+		@include linear-gradient(top, green, black);
+	}
+}
+
+.clear {
+	clear: both;
+}
